@@ -1,0 +1,23 @@
+----------color------------
+vasual color : EEEBE4
+title color : 222222
+text color : 737673
+text on color : 602A19
+text off color : 666666
+button color : 805547
+bg-color : FFFFFF
+main 02 bg-color : F6F6F6
+
+---------- font size ----------------
+header title : 1.125em
+header text : 1em
+
+visual title : 4.375em
+visual text : 1.75em
+visual #text : 0.5em
+
+main title : 1.5em
+sub title : 16px
+main text : 1.125em
+
+
