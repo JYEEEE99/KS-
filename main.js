@@ -3,6 +3,7 @@ $(document).ready(function () {
   headerUp();
   menuSlideDown();
   mainContent01Vue();
+  brandClicks();
   familyBoxOn();
   familyBoxOff();
   mobileMenuBtn();
@@ -50,8 +51,7 @@ let headerUp = function () {
 
 // 메인 콘텐츠
 let main01 = $(".main__01");
-let brand01 = main01.find(".brand__01");
-let brand02 = main01.find(".brand__02");
+let brand = main01.find(".brand");
 let vueBtn = main01.find(".vue__btn");
 let main01Content = main01.find(".content");
 
@@ -70,13 +70,35 @@ function mainContent01Vue() {
     if (i <= 2) {
       // vueBtn의 index값이 0, 1, 2 이면 brand01에 on클래스 추가
       // brand02 on 클래스 제거
-      brand01.addClass("on");
-      brand02.removeClass("on");
+      brand.eq(0).addClass("on");
+      brand.eq(1).removeClass("on");
     } else {
       // vueBtn의 index값이 2보다 크면 brand02에 on클래스 추가
       // brand01 on 클래스 제거
-      brand01.removeClass("on");
-      brand02.addClass("on");
+      brand.eq(0).removeClass("on");
+      brand.eq(1).addClass("on");
+    }
+  });
+}
+
+// brand 클릭 이벤트
+function brandClicks() {
+  brand.on("click", function () {
+    // brand 영역 클릭시 brand, veuBtn, content의 on클래스 전부 삭제
+    let i = $(this).index();
+    brand.removeClass("on");
+    main01Content.removeClass("on");
+    vueBtn.removeClass("on");
+    if (i === 1) {
+      // 클릭한 brand의 index값이 1과 일치O brand__02, vue__btn__03, content__03에 on클래스 추가
+      brand.eq(1).addClass("on");
+      vueBtn.eq(3).addClass("on");
+      main01Content.eq(3).addClass("on");
+    } else {
+      // 클릭한 brand의 index값이 1과 일치X brand__01, vue__btn__01, content__01에 on클래스 추가
+      vueBtn.eq(i).addClass("on");
+      brand.eq(i).addClass("on");
+      main01Content.eq(i).addClass("on");
     }
   });
 }

@@ -338,52 +338,47 @@
 .main__01 .content .img__box {
     display: flex;
 }
-.main__01 .brand {
+.main__01 .brand__box {
     font-size: 1.5em;
-    padding-bottom: 60px;
     position: relative;
     color: #aaa;
     cursor: pointer;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    margin-bottom: 20px;
 }
-.main__01 .brand__01,
-.main__01 .brand__02 {
+.main__01 .brand {
     width: 50%;
+    padding: 40px;
 }
-.main__01 .brand__02.on,
-.main__01 .brand__01.on {
+.main__01 .brand.on {
     color: #602a19;
 }
 
-.main__01 .brand__01::after,
-.main__01 .brand__02::after {
+.main__01 .brand::after {
     content: "";
     position: absolute;
     right: 0;
     left: 0;
-    bottom: 25px;
+    bottom: 0;
     height: 2px;
     background-color: #aaa;
 }
-.main__01 .brand__01.on::after,
-.main__01 .brand__02.on::after {
+.main__01 .brand.on::after{
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 25px;
+    bottom: 0;
     height: 2px;
     background-color: #602a19;
     width: 50%;
-}
-
-.main__01 .brand__01.on::after {
     z-index: 1;
 }
+
 .main__01 .brand__02.on::after {left: 50%;}
 .main__01 .btn__container {
     display: flex;
@@ -1422,7 +1417,7 @@ main text : 1.125em
         margin-bottom: 30px;
     }
     
-    .main__01 .brand {
+    .main__01 .brand__box {
         font-size: 18px;
     }
     .main__01 .btn__box {
