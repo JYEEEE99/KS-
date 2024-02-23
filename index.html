@@ -17,11 +17,11 @@
     <!-- JS library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
     <header id="header" class="header">
-        <div class="header__container">
+        <div id="desktop__header" class="header__container">
             <div class="logo__box">
                 <a href="index.html">
                     <h1>
@@ -129,6 +129,119 @@
                     <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </div>
+        </div>
+        <div id="mobile__header" class="header__container">
+            <div class="logo__box">
+                <a href="index.html">
+                    <h1>
+                        <img src="images/header_icon.png" alt="KS 벽지">
+                    </h1>
+                    </a>
+            </div>
+            <div class="menu__box">
+                <ul class="list">
+                    <li>
+                        <div class="search__box">
+                            <div class="wish">
+                                <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i></a> 
+                            </div>
+                            <div class="search">
+                                <input type="text" placeholder="제품번호를 입력해주세요.">
+                            </div>
+                            <div class="search__icon">
+                                <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                        </div>
+                            </li>
+                    <li>
+                        <ul class="nav__list">
+                            <li class="nav__list__item">
+                                <h2>
+                                    <a href="javascript:void(0)">케이에스더블유</a>
+                                </h2>
+                                <div class="nav__btn">
+                                    <a href="javascript:void(0)">계열사</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="nav__list">
+                            <li class="nav__list__item">
+                                <h2>
+                                    <a href="javascript:void(0)">회사소개</a>
+                                </h2>
+                                <div class="nav__btn">
+                                    <a href="javascript:void(0)">회사소개</a>
+                                    <a href="javascript:void(0)">CEO 인사말</a>
+                                    <a href="javascript:void(0)">LOGO 소개</a>
+                                    <a href="javascript:void(0)">채용정보</a>
+                                    <a href="javascript:void(0)">위치안내</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="nav__list">
+                            <li class="nav__list__item">
+                                <h2>
+                                    <a href="javascript:void(0)">제품소개</a>
+                                </h2>
+                                <div class="nav__btn">
+                                    <a href="javascript:void(0)">제품소개</a>
+                                    <a href="javascript:void(0)">실크 브랜드</a>
+                                    <a href="javascript:void(0)">합지 브랜드</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="nav__list">
+                            <li class="nav__list__item">
+                                <h2>
+                                    <a href="javascript:void(0)">홍보센터</a>
+                                </h2>
+                                <div class="nav__btn">
+                                    <a href="javascript:void(0)">인증 및 수상</a>
+                                    <a href="javascript:void(0)">뉴스 및 언론홍보</a>
+                                    <a href="javascript:void(0)">SNS</a>
+                                    <a href="javascript:void(0)">이벤트</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="nav__list">
+                            <li class="nav__list__item">
+                                <h2>
+                            <a href="javascript:void(0)">인테리어</a>
+                                </h2>
+                                <div class="nav__btn">
+                                    <a href="javascript:void(0)">시공사례</a>
+                                    <a href="javascript:void(0)">인테리어<br>스타일링</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="nav__list">
+                            <li class="nav__list__item">
+                                <h2>
+                                    <a href="javascript:void(0)">고객센터</a>
+                                </h2>
+                            <div class="nav__btn">
+                                    <a href="javascript:void(0)">공지사항</a>
+                                    <a href="javascript:void(0)">디자인상담</a>
+                                    <a href="javascript:void(0)">1:1 문의</a>
+                                    <a href="javascript:void(0)">대리점 찾기</a>
+                            </div>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
             <div class="mobile__btn">
                 <div class="menu__btn on">
                     <i class="fa-solid fa-bars"></i>
@@ -694,7 +807,7 @@
 </body>
 
 <!-- JS -->
-    <script src="common.js"></script>
+    <script src="main.js"></script>
     <script src="swiper.js"></script>
     <script src="images.js"></script>
 </html>
