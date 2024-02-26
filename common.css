@@ -578,29 +578,6 @@
 .main__02 a:hover img {
     transform: scale(1.015);
 }
-/* content03 */
-/* ----------color------------
-vasual color : EEEBE4
-title color : 222222
-text color : 737673
-text on color : 602A19
-text off color : 666666
-button color : 805547
-bg-color : FFFFFF
-main 02 bg-color : F6F6F6
-
----------- font size ----------------
-header title : 1.125em
-header text : 1em
-
-visual title : 4.375em
-visual text : 1.75em
-visual #text : 0.65em
-
-main title : 1.5em
-sub title : 16px
-main text : 1.125em
- */
 .main__03 .sns__box {
     margin: 30px 0 50px;
     display: flex;
@@ -829,7 +806,42 @@ main text : 1.125em
     color: #fff;
     cursor: pointer;
 }
+.scroll__up__btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #602a19;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-size: 18px;
+    cursor: pointer;
+}
+.scroll__up__btn:hover {
+    opacity: 0.9;
+}
+.scroll__up__btn::before,
+.scroll__up__btn::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+}
 
+.scroll__up__btn::before {
+    right: 11px;
+    transform: rotate(35deg);
+}
+.scroll__up__btn::after {
+    left: 11px;
+    transform: rotate(-35deg);
+}
 /* 반응형 */
 @media screen and (max-width: 1610px) and (min-width: 1441px) {
     #desktop__header .header__container {
@@ -849,6 +861,10 @@ main text : 1.125em
     .visual article {
         width: calc(100% - 20px);
         margin: 0 auto;
+    }
+    .scroll__up__btn {
+        bottom: 30px;
+        right: 30px;
     }
 }
 @media screen and (max-width: 1200px) and (min-width: 1024px) {
@@ -997,6 +1013,10 @@ main text : 1.125em
     }
     .main__01 .vue__btn {
         padding: 10px;
+    }
+    .scroll__up__btn {
+        bottom: 20px;
+        right: 20px;
     }
 }
 
@@ -1220,6 +1240,10 @@ main text : 1.125em
         width: calc(100% / 2 - 10px);
         margin: 5px auto;
         position: relative;
+    }
+    .scroll__up__btn {
+        bottom: 20px;
+        right: 20px;
     }
 }
 
@@ -1568,6 +1592,17 @@ main text : 1.125em
         background-color: #fff;
         display: block;
     }
+    .scroll__up__btn {
+        bottom: 50px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+    }
+    .scroll__up__btn::after,
+    .scroll__up__btn::before {
+        width: 8px;
+    }
+
     
 }
 

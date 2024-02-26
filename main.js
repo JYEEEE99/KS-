@@ -7,6 +7,7 @@ $(document).ready(function () {
   familyBoxOn();
   familyBoxOff();
   mobileMenuBtn();
+  scrollUpBtnClick();
   $(window).scroll(function () {
     updateHeader();
   });
@@ -161,5 +162,18 @@ function menuSlideDown() {
       downBtn.removeClass("on");
       downBtn.siblings(".nav__btn").find("a").stop().slideUp();
     }
+  });
+}
+
+let scrollUpBtn = $(".scroll__up__btn");
+
+function scrollUpBtnClick() {
+  scrollUpBtn.on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      "slow"
+    );
   });
 }
